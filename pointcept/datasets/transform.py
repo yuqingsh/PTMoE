@@ -861,6 +861,10 @@ class GridSample(object):
                     )
                 data_dict["displacement"] = displacement[idx_unique]
                 data_dict["index_valid_keys"].append("displacement")
+            # n_sampled = data_dict['coord'].shape[0]
+            # assert data_dict["strength"].shape == (n_sampled, 1)
+            # assert data_dict['view_direction'].shape == (n_sampled, 3)
+            # assert data_dict["segment"].shape == (n_sampled,)
             return data_dict
 
         elif self.mode == "test":  # test mode
@@ -889,6 +893,10 @@ class GridSample(object):
                     data_dict["displacement"] = displacement[idx_part]
                     data_dict["index_valid_keys"].append("displacement")
                 data_part_list.append(data_part)
+            # n_sampled = data_dict['coord'].shape[0]
+            # assert data_dict["strength"].shape == (n_sampled, 1)
+            # assert data_dict['view_direction'].shape == (n_sampled, 3)
+            # assert data_dict["segment"].shape == (n_sampled,)
             return data_part_list
         else:
             raise NotImplementedError
