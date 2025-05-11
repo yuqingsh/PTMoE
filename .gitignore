@@ -16,3 +16,5 @@ outputs/
 Dockerfile
 *.sh
 /test
+*.err
+*.out
